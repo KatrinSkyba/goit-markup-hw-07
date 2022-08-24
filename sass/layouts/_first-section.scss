@@ -1,0 +1,27 @@
+.section-list {
+  display: flex;
+  gap: 30px;
+}
+.icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--additional-background-color);
+
+  margin-bottom: 30px;
+}
+.section-subtitle {
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.section-text {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+  width: 270px;
+}
