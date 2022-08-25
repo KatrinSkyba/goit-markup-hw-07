@@ -1,10 +1,15 @@
 @import './utils/vars';
+@import './utils/mixin';
+@import './utils/placeholders';
 @import './base/reset';
 @import './base/common';
 @import './utils/hidden';
 @import './components/container';
 @import './components/modal';
 @import './layouts/header';
+@import './layouts/logo';
+@import './layouts/site-nav';
+@import './layouts/contacts';
 @import './layouts/hero';
 @import './layouts/first-section';
 @import './layouts/gallery';
