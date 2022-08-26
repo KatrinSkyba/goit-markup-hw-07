@@ -1,5 +1,5 @@
 .contacts {
-  @include centeredFlex($ai: normal, $jc: normal);
+  @include centeredFlex(flex, center, center);
   @extend %list;
 }
 .header-contacts {
@@ -7,7 +7,7 @@
 }
 
 .contacts__link {
-  @include centeredFlex($jc: flex-start);
+  @include centeredFlex(flex, center, center);
   @extend %link;
   padding-top: 30px;
   padding-bottom: 30px;

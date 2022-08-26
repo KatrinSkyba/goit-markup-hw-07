@@ -1,5 +1,5 @@
 .site-nav {
-  @include centeredFlex($jc: flex-start);
+  @include centeredFlex(flex, center, center);
   @extend %list;
 }
 .site-nav__link {

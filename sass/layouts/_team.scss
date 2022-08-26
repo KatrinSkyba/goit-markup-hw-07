@@ -1,21 +1,16 @@
 .team {
-  background-color: var(--additional-background-color);
+  background-color: $additional-background-color;
   padding-top: 118px;
   padding-bottom: 94px;
 }
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
+
 .team-list {
+  @extend %list;
   display: flex;
 }
 .team-item {
   width: 270px;
-  background: #ffffff;
+  background: $background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -37,33 +32,31 @@
 .team-job {
   font-size: 16px;
   line-height: 1.17;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
   text-align: center;
   margin-bottom: 16px;
 }
 .team-contacts {
-  display: flex;
-  justify-content: center;
+  @include centeredFlex(flex, center, center);
+  @extend %list;
   gap: 10px;
 }
 .team-contacts-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex(flex, center, center);
+  @extend %link;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--icon-color);
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: $icon-color;
+  @extend %transition;
+
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
-    color: var(--background-color);
+    background-color: $accent-color;
+    color: $background-color;
   }
 }
 
 .team-contacts-icon {
-  fill: currentColor;
+  @extend %icon;
 }

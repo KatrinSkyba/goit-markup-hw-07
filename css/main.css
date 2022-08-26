@@ -1,4 +1,4 @@
-.contacts, .site-nav {
+.gallery-list, .features-list, .contacts, .site-nav {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -63,6 +63,14 @@ address {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -304,7 +312,7 @@ address {
 .header__nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .logo {
@@ -330,7 +338,7 @@ address {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .site-nav__link {
@@ -384,8 +392,8 @@ address {
 
 .contacts {
   display: flex;
-  align-items: normal;
-  justify-content: normal;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-contacts {
@@ -395,7 +403,7 @@ address {
 .contacts__link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
   font-weight: 500;
@@ -457,58 +465,48 @@ address {
   background-color: #188ce8;
 }
 
-.section-list {
+.features-list {
   display: flex;
   gap: 30px;
 }
 
-.icon-thumb {
+.features-list__thumb {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 270px;
   height: 120px;
   border-radius: 4px;
-  background-color: var(--additional-background-color);
   margin-bottom: 30px;
+  background-color: #f5f4fa;
 }
 
-.section-subtitle {
-  font-size: var(--main-font-size);
+.features-list__subtitle {
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-.section-text {
-  line-height: 1.71;
-  color: var(--secondary-text-color);
+.features-list__text {
   width: 270px;
+  line-height: 1.71;
+  color: #757575;
 }
 
-.no-padding {
+.gallery {
   padding-top: 0;
-}
-
-.gallery-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .gallery-list {
   display: flex;
   gap: 30px;
 }
-
-.thumb-image {
+.gallery-list__thumb-image {
   position: relative;
 }
-
-.over-image-text {
+.gallery-list__over-text {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -520,7 +518,7 @@ address {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--background-color);
+  color: #ffffff;
 }
 
 .team {

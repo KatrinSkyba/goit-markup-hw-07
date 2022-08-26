@@ -3,5 +3,5 @@
 }
 .header__container,
 .header__nav {
-  @include centeredFlex($jc: flex-start);
+  @include centeredFlex(flex, center, center);
 }
