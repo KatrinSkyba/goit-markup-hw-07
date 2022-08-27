@@ -1,83 +1,66 @@
 .footer {
-  background-color: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: $footer-color;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-.footer-adress {
+
+.footer__thumb {
   margin-right: 70px;
 }
-.footer-logo {
+
+.adress__list {
+  @extend %list;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__link {
   display: block;
+  margin-bottom: 9px;
+  @extend %link;
+  line-height: 1.71;
+  color: $background-color;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.socials__title {
   margin-bottom: 20px;
-}
-.logo-second {
-  color: var(--background-color);
-}
-
-.footer-point {
-  line-height: 1.71;
-  color: var(--background-color);
-  display: block;
-  margin-bottom: 9px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-
-.footer-link {
-  line-height: 1.71;
-  color: var(--additional-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-
-.footer-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.footer-soc-title {
   font-weight: 700;
-  font-size: var(--main-font-size);
+  font-size: $main-font-size;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--background-color);
-  margin-bottom: 20px;
+  color: $background-color;
 }
-.footer-soc-list {
+.socials__list {
   display: flex;
   gap: 10px;
+  @extend %list;
 }
-.footer-soc-link {
+.socials__link {
+  @include centeredFlex(flex, center, center);
+  @extend %link;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--background-color);
-  background-color: var(--icon-footer-background);
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: $background-color;
+  background-color: $icon-footer-background;
+  @extend %transition;
   &:hover,
   &:focus {
-    color: var(--background-color);
-    background-color: var(--accent-color);
+    color: $background-color;
+    background-color: $accent-color;
   }
 }
-.footer-icon {
-  fill: currentColor;
+.socials__icon {
+  @extend %icon;
 }

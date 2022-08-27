@@ -1,17 +1,18 @@
 .sign-up {
   margin-left: auto;
+  .sign-up__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $background-color;
+    margin-bottom: 20px;
+  }
 }
-.form-title {
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: var(--background-color);
-  margin-bottom: 20px;
-}
-.sign-up-form {
+
+.form {
   display: flex;
 }
-.form-email {
+.form__input {
   padding: 11px;
   width: 358px;
   background-color: transparent;
@@ -19,50 +20,43 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   cursor: pointer;
-}
-
-.form-email:hover,
-.form-email:focus {
-  border-color: var(--accent-color);
-}
-.form-email::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .submit-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex(flex, center, center);
   width: 200px;
   height: 50px;
   padding: 10px 10px 10px 28px;
   margin-left: 12px;
   font-family: inherit;
-  color: var(--background-color);
+  color: $third-text-color;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  background-color: $accent-color;
+  box-shadow: $box-button-shadow;
   transform: scale(1);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %button;
+  @extend %transition;
   &:hover,
   &:focus {
     transform: scale(1.02);
   }
 }
 
-.send-icon {
-  color: var(--background-color);
+.submit-button__icon {
+  @extend %icon;
   margin-left: 10px;
 }

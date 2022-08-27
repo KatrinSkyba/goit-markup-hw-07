@@ -1,21 +1,16 @@
 .clients-section-list {
-  display: flex;
-  justify-content: center;
+  @include centeredFlex(flex, center, center);
   gap: 30px;
   @extend %list;
 }
 .clients-section-link {
-  display: flex;
+  @include centeredFlex(flex, center, center);
   width: 170px;
   height: 92px;
   border: 1px solid $icon-color;
   color: $icon-color;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   &:hover,
   &:focus {
     border-color: $accent-color;
@@ -23,5 +18,5 @@
   }
 }
 .clients-icon {
-  fill: currentColor;
+  @extend %icon;
 }

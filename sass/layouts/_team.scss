@@ -1,12 +1,10 @@
 .team {
   background-color: $additional-background-color;
-  padding-top: 118px;
-  padding-bottom: 94px;
 }
 
 .team-list {
-  @extend %list;
   display: flex;
+  @extend %list;
 }
 .team-item {
   width: 270px;
@@ -15,10 +13,11 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100% - 30px * 3) / 4);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .team-description {
   padding: 30px 0;
 }

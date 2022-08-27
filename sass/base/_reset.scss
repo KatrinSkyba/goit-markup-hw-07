@@ -1,9 +1,9 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color);
-  color: var(--main-text-color);
-  font-size: var(--main-font-size);
-  letter-spacing: var(--main-letter-spacing);
+  background-color: $background-color;
+  color: $main-text-color;
+  font-size: $main-font-size;
+  letter-spacing: $main-letter-spacing;
 }
 p,
 h1,
