@@ -25,11 +25,14 @@
   margin-bottom: 9px;
   @extend %link;
   line-height: 1.71;
-  color: $background-color;
+  color: $additional-color;
   @extend %transition;
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  &--change-color {
+    color: $background-color;
   }
 }
 

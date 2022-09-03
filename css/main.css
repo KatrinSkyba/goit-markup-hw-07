@@ -631,10 +631,13 @@ address {
   display: block;
   margin-bottom: 9px;
   line-height: 1.71;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
 }
 .adress__link:hover, .adress__link:focus {
   color: #2196f3;
+}
+.adress__link--change-color {
+  color: #ffffff;
 }
 
 .socials__title {
